@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
+    {# hook 'seomaticRender' #}
+    
+    {# <link rel="shortcut icon" href="/lib/img/favicon.ico">
+    <link href="lib/img/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" /> #}
+
+    {# NOTE: CREATE AND INSERT FAVICON LINKS AND META TAGS - Can use "http://realfavicongenerator.net/" #}
+    {# -- Links -- #}
+    <link rel="dns-prefetch" href="{{ alias('@web') }}">
+    <link rel="preconnect" href="{{ alias('@web') }}" crossorigin="">
+
+    {# FONTS #}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Fjalla+One" rel="stylesheet">
+
+    {# STYLES #}
+    <link rel="stylesheet" href="{{ alias('@web/dist/styles/main.css') }}">
+  </head>
+
+  <body>
+    {# PAGE HEADER #}
+        
+    {% include "_partials/header.twig" %}
+
+    {# PAGE BANNER #}
+    {% block pagebanner %}{% endblock %}
+
+    <div class="wrap">
+      <div id="main-content" class="content">
+
+        {# MAIN #}
+        <main role="main">
+            {% block main %}{% endblock %}
+        </main>
+
+      </div>
+    </div>
+
+    {# FOOTER #}
+    {% block footer %}{% endblock %}
+
+     
+    {# SCRIPTS #}  
+    <script src="{{alias('@web/dist/scripts/main.js')}}"></script>
+
+    {# ANALYTICS #}
+
+  </body>
+</html>
