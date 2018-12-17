@@ -14,6 +14,7 @@
 # ASSETS
 /public/assets/*
 /web/assets/*
+/web/dist/*
 /cpresources/*
 
 # IMAGER TRANSFORMS
