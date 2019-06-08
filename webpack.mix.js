@@ -18,6 +18,10 @@ mix.js('assets/scripts/main.js', 'web/dist/scripts/')
    .copy('assets/fonts/', 'web/dist/fonts/')
    .copy('assets/images/', 'web/dist/images/');
 
+mix.postCss('assets/styles/tailwind.css', 'web/dist/styles/', [
+  require('tailwindcss'),
+])
+
 if (!mix.inProduction()) {
     mix.webpackConfig({
         devtool: 'source-map'

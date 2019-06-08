@@ -1,14 +1,11 @@
 //Import Libraries
-import $ from 'jquery';
-import 'bootstrap';
 import Vue from 'vue';
-//import { store } from './store';
 
 // Import custom modules
 import App from'./modules/app.js';
 
 // Import custom components
-//import Posts from './components/Posts.vue';
+//import ExampleComponent from './components/ExampleComponent.vue';
 
 
 //Initiate Classes Here
@@ -19,13 +16,12 @@ const app = new App();
 function run() {
 
   app.init();
-  app.hamburger(".hamburger");
+  app.hamburger(".js-hamburger");
 
-  // const appPosts = new Vue({ 
-  //     el: '#appPosts',
-  //     store: store,
+  // const exampleComponent = new Vue({ 
+  //     el: '#ExampleComponent',
   //     components: {
-  //       Posts
+  //       ExampleComponent
   //     }
   // });
 
